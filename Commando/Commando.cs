@@ -39,6 +39,19 @@ namespace Commando
             Console.WriteLine($"commando with codeName {this.CodeName} is attacking");
         }
 
+        public string SayName(string commanderRank)
+        {
+            if(commanderRank == "General")
+            {
+                return this.Name;
+            }
+            else if(commanderRank == "Colonel")
+            {
+                return this.CodeName;
+            }
+            return "classified data";
+        }
+
     }
 
     enum StatusType

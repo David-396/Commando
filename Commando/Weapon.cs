@@ -21,8 +21,15 @@ namespace Commando
 
         public void Shoot()
         {
-            this.Ammo -= 1;
-            Console.WriteLine($"{this.Name} shooting");
+            if(this.Ammo > 0)
+            {
+                this.Ammo -= 1;
+                Console.WriteLine($"{this.Name} shooting");
+            }
+            else
+            {
+                Console.WriteLine("not enough ammo");
+            }
         }
 
 
