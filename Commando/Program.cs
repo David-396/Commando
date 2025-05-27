@@ -15,7 +15,7 @@ namespace Commando
             cmndo.Walk();
             Weapon wpn = new Weapon("s100", "elvit", 5);
             wpn.Shoot();
-            Console.WriteLine(cmndo.Name);
+            cmndo.CodeName = "456";
         }
     }
 }

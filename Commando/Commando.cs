@@ -8,10 +8,10 @@ namespace Commando
 {
     internal class Commando
     {
-        private string Name;
+        protected string Name {  get; set; }
         public string CodeName { get; set; }
         private string[] Tools = new string[5];
-        private StatusType Status;
+        public StatusType Status {  get; set; }
 
 
         public Commando(string Name, string CodeName, string[] Tools, StatusType Status)
@@ -58,6 +58,8 @@ namespace Commando
     {
         walking, 
         hiding,
-        standing
+        standing,
+        parachuting,
+        swim
     }
 }
