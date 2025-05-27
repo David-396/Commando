@@ -9,8 +9,8 @@ namespace Commando
     internal class Commando
     {
         private string Name;
-        private string CodeName;
-        private string[] Tools;
+        public string CodeName { get; set; }
+        private string[] Tools = new string[5];
         private StatusType Status;
 
 
