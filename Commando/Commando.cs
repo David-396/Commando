@@ -11,10 +11,10 @@ namespace Commando
         private string Name;
         private string CodeName;
         private string[] Tools;
-        private string Status;
+        private StatusType Status;
 
 
-        public Commando(string Name, string CodeName, string[] Tools, string Status)
+        public Commando(string Name, string CodeName, string[] Tools, StatusType Status)
         {
             this.Name = Name;
             this.CodeName = CodeName;
@@ -24,13 +24,13 @@ namespace Commando
 
         public void Walk()
         {
-            this.Status = "walking";
+            this.Status = StatusType.walking;
             Console.WriteLine($"{this.Name} is {this.Status}");
         }
 
         public void Hide()
         {
-            this.Status = "hiding";
+            this.Status = StatusType.hiding;
             Console.WriteLine($"{this.Name} is {this.Status}");
         }
 
@@ -39,5 +39,12 @@ namespace Commando
             Console.WriteLine($"commando with codeName {this.CodeName} is attacking");
         }
 
+    }
+
+    enum StatusType
+    {
+        walking, 
+        hiding,
+        standing
     }
 }
