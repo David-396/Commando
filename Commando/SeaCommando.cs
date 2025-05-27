@@ -16,5 +16,10 @@ namespace Commando
             this.Status = StatusType.swim;
             Console.WriteLine($"{this.Name} is swimming");
         }
+
+        public override void Attack()
+        {
+            Console.WriteLine($"{this.Name} attacking from the sea");
+        }
     }
 }

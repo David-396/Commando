@@ -34,7 +34,7 @@ namespace Commando
             Console.WriteLine($"{this.Name} is {this.Status}");
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
             Console.WriteLine($"commando with codeName {this.CodeName} is attacking");
         }

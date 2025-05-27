@@ -11,10 +11,15 @@ namespace Commando
         public AirCommando(string Name, string CodeName, string[] Tools, StatusType Status)
             : base(Name, CodeName, Tools, Status) { }
         
-        public Parachute()
+        public void Parachute()
         {
             this.Status = StatusType.parachuting;
             Console.WriteLine($"{this.Name} is parachuting");
+        }
+
+        public override void Attack()
+        {
+            Console.WriteLine($"{this.Name} attacking from the air");
         }
 
     }
