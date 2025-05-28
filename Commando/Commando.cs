@@ -9,47 +9,56 @@ namespace Commando
     internal class Commando
     {
         protected string Name {  get; set; }
-        public string CodeName { get; set; }
-        private string[] Tools = new string[5];
-        public StatusType Status {  get; set; }
+        protected string CodeName { get; set; }
+        protected string[] Tools = new string[5] { "gun", "knife", "bag", "hammer", "grenade" };
+        protected StatusType Status {  get; set; }
 
 
-        public Commando(string Name, string CodeName, string[] Tools, StatusType Status)
+        public Commando(string Name, string CodeName, StatusType Status)
         {
             this.Name = Name;
             this.CodeName = CodeName;
-            this.Tools = Tools;
             this.Status = Status;
         }
+
+        public string GetName()
+        {
+            return this.Name;
+        }
+        public string GetCodeName()
+        {
+            return this.CodeName;
+        }
+        public string[] GetTools()
+        {
+            return this.Tools;
+        }
+        public StatusType GetStatus()
+        {
+            return this.Status;
+        }
+
 
         public void Walk()
         {
             this.Status = StatusType.walking;
             Console.WriteLine($"{this.Name} is {this.Status}");
         }
-
         public void Hide()
         {
             this.Status = StatusType.hiding;
             Console.WriteLine($"{this.Name} is {this.Status}");
         }
-
         public virtual void Attack()
         {
             Console.WriteLine($"commando with codeName {this.CodeName} is attacking");
         }
 
-        public string SayName(string commanderRank)
+
+
+        public string CSayName(string commanderRank)
         {
-            if(commanderRank == "General")
-            {
-                return this.Name;
-            }
-            else if(commanderRank == "Colonel")
-            {
-                return this.CodeName;
-            }
-            return "classified data";
+            return SayName_c.SayName(commanderRank, this);
         }
 
     }

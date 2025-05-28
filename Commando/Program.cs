@@ -10,7 +10,7 @@ namespace Commando
     {
         static void Main(string[] args)
         {
-            Commando cmndo1 = new Commando("david", "123", new string[5] {"gun","knife","bag","hammer","grenade"}, StatusType.standing);
+            Commando cmndo1 = new Commando("david", "123", StatusType.standing);
             Commando cmndo2 = new AirCommando("da", "123", new string[5] {"gun","knife","bag","hammer","grenade"}, StatusType.standing);
             Commando cmndo3 = new SeaCommando("vid", "123", new string[5] {"gun","knife","bag","hammer","grenade"}, StatusType.standing);
             Commando[] cmndoARR = {cmndo1, cmndo2, cmndo3};

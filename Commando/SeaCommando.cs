@@ -8,8 +8,8 @@ namespace Commando
 {
     internal class SeaCommando : Commando
     {
-        public SeaCommando(string Name, string CodeName, string[] Tools, StatusType Status)
-            : base(Name, CodeName, Tools, Status) { }
+        public SeaCommando(string Name, string CodeName, StatusType Status)
+            : base(Name, CodeName, Status) { }
 
         public void Swim()
         {
